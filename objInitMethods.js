@@ -23,3 +23,14 @@ let mealsObject = {meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch'
 
 console.log(mealsObject.meals[3]);
 */
+const arrayOfPeople = [
+  {name:'Alex' ,jobTitle :'Game tester'},
+  {name:'Suman' ,jobTitle :'Student'},
+  {name:'Rich' ,jobTitle :'Mentor'},
+  {name:'Ali' ,jobTitle :'TA'},
+  {name:'Chris' ,jobTitle :'TA'},
+];
+
+arrayOfPeople.forEach(person => {
+  console.log(`${person.name} is a ${person.jobTitle}`);
+});

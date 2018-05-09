@@ -1,3 +1,4 @@
+'use strict';
 // running the function with `objectA` and `expectedKeys`
 // should return `true`
 const objectA = {
