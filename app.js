@@ -5,8 +5,8 @@ function createMyObject() {
         'olly olly': 'oxen free',
         sayHello: function(){return 'hello'},
     }
-  }
-  
+  }  
+
   /* From here down, you are not expected to 
      understand.... for now :)  
      

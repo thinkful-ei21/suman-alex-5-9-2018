@@ -1,3 +1,4 @@
+'use strict';
 function personMaker() {
   var person = {
     firstName: 'Paul',
@@ -11,13 +12,7 @@ function personMaker() {
   return person;
 }
 
-/* From here down, you are not expected to 
-   understand.... for now :)  
-   
-   
-   Nothing to see here!
-   
-*/
+
 
 (function testPersonMaker() {
   var person = personMaker();
