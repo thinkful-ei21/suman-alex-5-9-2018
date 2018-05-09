@@ -1,26 +1,27 @@
 'use strict';
 let message = 'craft block argon meter bells brown croon droop';
-function decode(message){  
-  let words = message.split(' ');
-  let result = [];  
-  for(let i=0; i < words.length;i++){    
-    switch(words[i].split('')[0]){
-    case 'a':
-      result.push(words[i].split('')[1]);
-      break;
-    case 'b':
-      result.push(words[i].split('')[2]);
-      break;
-    case 'c':
-      result.push(words[i].split('')[3]);
-      break;
-    case 'd':
-      result.push(words[i].split('')[4]);
-      break;
-    default:
-      result.push(' ');
-    }
-  }
-  console.log(result.join(''));
+function decode(word){    
+  let obj = {a : 2, b : 3, c :4,d :5};     
+  switch(word[0]){
+  case 'a':
+    return word[obj.a -1];      
+  case 'b':
+    return word[obj.b -1];      
+  case 'c':
+    return word[obj.c -1];      
+  case 'd':
+    return word[obj.d -1];      
+  default:
+    return ' ';
+  }    
 }
-decode(message);
+function decodeWords(message){  
+  // return message.split(' ').map(word => {
+  //   return decode(word);    
+  // }).join('');  
+  return message.split(' ').reduce((acc,word) =>{
+    return acc += decode(word);
+  },'');
+}
+
+console.log(decodeWords(message));
