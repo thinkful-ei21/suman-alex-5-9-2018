@@ -24,21 +24,35 @@ let mealsObject = {meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch'
 console.log(mealsObject.meals[3]);
 */
 
+function employee(name,jobTitle){
+  let obj = {name: name, jobTitle: jobTitle};
+  return obj;
+}
+
 const arrayOfPeople = [
-  {name:'Alex' ,jobTitle :'Game tester' },
-  {name:'Suman' ,jobTitle :'Student' },
-  {name:'Rich' ,jobTitle :'Mentor' },
-  {name:'Ali' ,jobTitle :'TA'},
-  {name:'Chris' ,jobTitle :'TA'},
+  employee('bandita','software developer'),
+  employee('Alex','Game tester'),
+  employee('Suman','Student'),
+  employee('Rich','Mentor'),
+  employee('Ali','Mentor'),  
 ];
 
+employee.prototype.boss = null;
+arrayOfPeople[0].boss = 'Alex';
+arrayOfPeople[1].boss = 'Suman';
+arrayOfPeople[2].boss = 'Rich';
+arrayOfPeople[3].boss = 'Ali';
+// console.log(arrayOfPeople[0].boss = 'Alex');
+// console.log(arrayOfPeople[0]);
+let messageStr;
+
 arrayOfPeople.forEach(person => {
-    if (person.name!=='Chris'){
-        person.boss = 'Chris';
-        console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`);
-    }
-    else {
-        console.log(`${person.jobTitle} ${person.name} doesn't report to anybody`);
-    }
+  if(person.boss !== undefined){
+    messageStr = `reports to ${person.boss}`;
+  }
+  else{
+    messageStr = 'doesn\'t report to anybody';
+  }
+  console.log(`${person.name} is a ${person.jobTitle} ${messageStr}`);
 });
 
